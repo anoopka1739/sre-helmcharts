@@ -1,0 +1,37 @@
+argo-cd:
+  global:
+    domain: myargocd.learnsrebyanoop.com
+
+  configs:
+    secret:
+      createSecret: true
+      argocdServerAdminPassword: "$2a$10$//5VgjtID84aDVCLswP1H.52GlXqoyjYAMMTMTPA6DfWgN4O1TzxK"
+  controller:
+    replicas: 1
+  dex:
+    enabled: true
+    resources:
+      limits:
+        cpu: 50m
+        memory: 64Mi
+      requests:
+        cpu: 10m
+        memory: 32Mi
+  redis:
+    enabled: false
+  redis-ha:
+    enabled: true
+  server:
+    replicas: 1
+    ingress:
+      enabled: true
+      annotations:
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      hostname: "myargocd.learnsrebyanoop.com"
+      path: /
+      pathType: Prefix
+      tls: false
+  repoServer:
+    replicas: 1    
+  applicationSet:
+    replicas: 1
