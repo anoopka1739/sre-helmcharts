@@ -30,7 +30,10 @@ argo-cd:
       hostname: "myargocd.learnsrebyanoop.com"
       path: /
       pathType: Prefix
-      tls: false
+      # Notice there is no secretName here anymore
+      tls:
+        - hosts:
+            - myargocd.learnsrebyanoop.com
   repoServer:
     replicas: 1    
   applicationSet:
