@@ -1,0 +1,6 @@
+dependencies:
+- name: argo-cd
+  repository: file://charts/argo-cd
+  version: 10.17.1
+digest: sha256:271798e8526d6c3c2b854372bc22b8e280f40529800d4ce8c71871411edee3a3
+generated: "2026-11-10T10:05:53.881353438Z"

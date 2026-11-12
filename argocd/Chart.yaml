@@ -1,0 +1,10 @@
+apiVersion: v2
+name: platform-argocd
+description: Argo CD HA deployment for the EKS platform
+type: application
+version: 1.0.0
+
+dependencies:
+  - name: argo-cd
+    version: 10.17.1
+    repository: "file://charts/argo-cd"
