@@ -25,6 +25,7 @@ argo-cd:
     replicas: 1
     ingress:
       enabled: true
+      ingressClassName: nginx
       annotations:
         nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
       hostname: "myargocd.learnsrebyanoop.com"
