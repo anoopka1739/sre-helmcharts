@@ -1,7 +1,7 @@
 ingress-nginx:
   controller:
     extraArgs:
-      default-ssl-certificate: "ingress-nginx/wildcard-tls-secret"
+      default-ssl-certificate: "nginx-ingress/wildcard-tls-secret"
     ingressClassResource:
       # -- Name of the IngressClass
       name: nginx
