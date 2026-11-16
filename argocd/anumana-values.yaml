@@ -42,3 +42,5 @@ argo-cd:
     replicas: 1    
   applicationSet:
     replicas: 1
+  notifications:
+    enabled: false
