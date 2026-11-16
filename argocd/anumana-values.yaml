@@ -23,11 +23,14 @@ argo-cd:
     enabled: true
   server:
     replicas: 1
+    extraArgs:
+      - --insecure
     ingress:
       enabled: true
       ingressClassName: nginx
       annotations:
-        nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+        #nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+        nginx.ingress.kubernetes.io/proxy-body-size: "0"
       hostname: "myargocd.learnsrebyanoop.com"
       path: /
       pathType: Prefix
