@@ -5,7 +5,7 @@ argo-cd:
   configs:
     secret:
       createSecret: true
-      argocdServerAdminPassword: "$2a$10$//5VgjtID84aDVCLswP1H.52GlXqoyjYAMMTMTPA6DfWgN4O1TzxK"
+      argocdServerAdminPassword: "$2y$05$TSOulLL6dRkAjsw6V.zwvuJ8g9rxyPINhDV5p14VyiDHxD.iwv/RC"
   controller:
     replicas: 1
   dex:
