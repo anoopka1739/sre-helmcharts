@@ -18,9 +18,9 @@ argo-cd:
         cpu: 10m
         memory: 32Mi
   redis:
-    enabled: false
-  redis-ha:
     enabled: true
+  redis-ha:
+    enabled: false
   server:
     replicas: 1
     extraArgs:
